@@ -40,11 +40,18 @@ namespace ProductReviewManagementUsingLinq
             productReviewList.Add(new ProductReview() { ProductID = 24, UserID = 12, Rating = 3, Review = "Bad", isLike = true });
             productReviewList.Add(new ProductReview() { ProductID = 25, UserID = 12, Rating = 6, Review = "Good", isLike = false });
 
-            //Display list
-            foreach (var list in productReviewList)
+            ////Display list
+            
+            /*foreach (var list in productReviewList)
             {
                 Console.WriteLine("ProductID :" + list.ProductID + "  " + "UserID :" + list.UserID + "  " + "Rating :" + list.Rating + "  " + "Review :" + list.Review + "  " + "isLike :" + list.isLike);
-            }
+            }*/
+
+            //  UC2 : Retrieve Top 3 Records
+
+            Management management = new Management();
+            management.TopRecords(productReviewList);
         }
     }
+    
 }
