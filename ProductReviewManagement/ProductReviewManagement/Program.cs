@@ -46,7 +46,7 @@ namespace ProductReviewManagementUsingLinq
 
 
             Console.WriteLine("Select \n1)Create ProductReview Class with 25 Default values\n2)Retrive Top 3 Records of Top 3 Rating Values\n3)Details from Records(1,4,9) with rating>3\n4)count review of each product id\n5) retrieve product id or review only\n6)Skip top 5 Records" +
-                "\n7)Create Datatable\n8)Retreive details who's islike value is true\n9)Average Rating of Each Product\n10)Records Whose Review is Nice");
+                "\n7)Create Datatable\n8)Retreive details who's islike value is true\n9)Average Rating of Each Product\n10)Records Whose Review is Nice\n11)Records whose UserID=10 and Order by rating");
             int option = Convert.ToInt16(Console.ReadLine());
             switch (option)
             {
@@ -82,6 +82,9 @@ namespace ProductReviewManagementUsingLinq
                     break;
                 case 10:
                     management.RetriveRecordsReviewIS_Nice(productReviewList);
+                    break;
+                case 11:
+                    management.RetriveRecordsUser1d_10(productReviewList);
                     break;
                 default:
                     Console.WriteLine("Please choose the correct option!");
