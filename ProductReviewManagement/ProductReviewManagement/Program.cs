@@ -45,7 +45,7 @@ namespace ProductReviewManagementUsingLinq
 
 
 
-            Console.WriteLine("Select \n1)Create ProductReview Class with 25 Default values\n2)Retrive Top 3 Records of Top 3 Rating Values\n3)Details from Records(1,4,9) with rating>3\n4)count review of each product id ");
+            Console.WriteLine("Select \n1)Create ProductReview Class with 25 Default values\n2)Retrive Top 3 Records of Top 3 Rating Values\n3)Details from Records(1,4,9) with rating>3\n4)count review of each product id\n5) retrieve product id or review only");
             int option = Convert.ToInt16(Console.ReadLine());
             switch (option)
             {
@@ -63,6 +63,9 @@ namespace ProductReviewManagementUsingLinq
                     break;
                 case 4:
                     management.CountRecordsbyProductID(productReviewList);
+                    break;
+                case 5:
+                    management.RetriveProductIdOrReview(productReviewList);
                     break;
                 default:
                     Console.WriteLine("Please choose the correct option!");
